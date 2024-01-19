@@ -1,1 +1,3 @@
-document.write("Hall of DOOOTY")
+function readySetStart() {
+  
+}
