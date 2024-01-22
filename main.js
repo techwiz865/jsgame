@@ -1,7 +1,6 @@
 splat.onclick = readySetStart;
 
-
-function readySetStart() {
+var readySetStart = (function() {
   const newElement = document.createElement("p");
   const newContent = document.createTextNode("OK, then let's start!");
   newElement.appendChild(newContent);
@@ -20,4 +19,11 @@ function readySetStart() {
   newElement4.appendChild(newContent2);
   const currentPlace4 = document.getElementById("div3");
   document.body.insertBefore(newElement4, currentPlace4);
-}
+  var executed = false;
+  return function() {
+    if (!executed) {
+    executed = true;
+    // do something
+        }
+    };
+})();
