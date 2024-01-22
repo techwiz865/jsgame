@@ -21,6 +21,7 @@ function readySetStart() {
     const currentPlace4 = document.getElementById("div3");
     document.body.insertBefore(newElement4, currentPlace4)
     already_clicked = true;
+    return true;
   }
  else {
    alert("You already clicked this!")
