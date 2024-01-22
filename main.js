@@ -22,4 +22,5 @@ function readySetStart() {
     document.body.insertBefore(newElement4, currentPlace4)
     already_clicked = true;
     return true;
+  }
 }
