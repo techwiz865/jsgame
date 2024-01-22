@@ -10,7 +10,7 @@ function readySetStart() {
     const newElement2 = document.createElement("button");
     const newContent2 = document.createTextNode("Rock");
     newElement2.appendChild(newContent2);
-    const currentPlace2 = document.getElementById("div2");
+    const currentPlace2 = document.getElementById("div1");
     document.body.insertBefore(newElement2, currentPlace2);
     const newElement3 = document.createElement("button");
     const newContent3 = document.createTextNode("Paper");
@@ -18,7 +18,7 @@ function readySetStart() {
     const newElement4 = document.createElement("button");
     const newContent4 = document.createTextNode("Scissor");
     newElement4.appendChild(newContent2);
-    const currentPlace4 = document.getElementById("div3");
+    const currentPlace4 = document.getElementById("div1");
     document.body.insertBefore(newElement4, currentPlace4)
   }
 }
