@@ -1,4 +1,4 @@
-splat.onclick = readySetStart
+splat.onclick = readySetStart;
 already_clicked = false;
 function readySetStart() {
   if (already_clicked = true) {
@@ -20,7 +20,5 @@ function readySetStart() {
     newElement4.appendChild(newContent2);
     const currentPlace4 = document.getElementById("div3");
     document.body.insertBefore(newElement4, currentPlace4)
-    already_clicked = true;
-    return true;
   }
 }
