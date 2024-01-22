@@ -1,7 +1,7 @@
 splat.onclick = readySetStart
 already_clicked = false;
 function readySetStart() {
-  if (already_clicked = false) {
+  if (already_clicked = true) {
     const newElement = document.createElement("p");
     const newContent = document.createTextNode("OK, then let's start!");
     newElement.appendChild(newContent);
@@ -20,6 +20,7 @@ function readySetStart() {
     newElement4.appendChild(newContent2);
     const currentPlace4 = document.getElementById("div3");
     document.body.insertBefore(newElement4, currentPlace4)
+    already_clicked = true;
   }
  else {
    alert("You already clicked this!")
