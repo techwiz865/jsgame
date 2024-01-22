@@ -15,13 +15,11 @@ function readySetStart() {
   const newElement3 = document.createElement("button");
   const newContent3 = document.createTextNode("Paper");
   newElement3.appendChild(newContent3);
-  const currentPlace3 = document.getElementById("div1");
-  document.body.insertBefore(newElement3, currentPlace3);
   const newElement4 = document.createElement("button");
   const newContent4 = document.createTextNode("Scissor");
   newElement4.appendChild(newContent2);
-  const currentPlace4 = document.getElementById("div1");
-  document.body.insertBefore(newElement4, currentPlace4);
+  
+  
 
 
 }
