@@ -1,9 +1,41 @@
 #splat {
-  color: yellow;
-  background-color: rebeccapurple;
-  font-weight: bold;
+    color: yellow;
+    background-color: rebeccapurple;
+    font-weight: bold;
+}
+  
+#div1 {
+display: flex;
 }
 
-#div1 {
-  display: flex;
+.winner {
+    color:crimson;
+}
+
+.loser {
+    color:indigo;
+}
+
+.tied {
+    color: fuchsia;
+}
+
+body {
+    background-color: aquamarine;
+    align-items: center;
+}
+
+#rock_button {
+    color: rgb(212, 70, 10);
+    font-weight: bold;
+}
+
+#paper_button {
+    color: rgb(85, 57, 169);
+    font-weight: bold;
+}
+
+#scissor_button {
+    color: rgb(87, 84, 4);
+    font-weight: bold;
 }
