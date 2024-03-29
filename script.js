@@ -1,3 +1,4 @@
+
 splat.onclick = ready;
 function ready() {
   const existingElement = document.getElementById("splat");
