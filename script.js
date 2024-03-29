@@ -1,4 +1,7 @@
-script.js
+let score = 0;
+let high_streak = 0;
+
+
 splat.onclick = ready;
 function ready() {
   const existingElement = document.getElementById("splat");
@@ -35,6 +38,24 @@ function ready() {
   newElement5.setAttribute("id","winner_display");
   const currentPlace5 = document.getElementById("div2");
   document.body.insertBefore(newElement5, currentPlace5);
+  const newElement6 = document.createElement("p");
+  const newContent6 = document.createTextNode("Streak: 0");
+  newElement6.appendChild(newContent6);
+  newElement6.setAttribute("id","streak_display");
+  const currentPlace6 = document.getElementById("div3");
+  document.body.insertBefore(newElement6, currentPlace6);
+  const newElement7 = document.createElement("p");
+  newElement7.setAttribute("id","score_display");
+  const newContent7 = document.createTextNode("Score: 0");
+  newElement7.appendChild(newContent7);
+  const currentPlace7 = document.getElementById("div4");
+  document.body.insertBefore(newElement7, currentPlace7);
+  const newElement8 = document.createElement("p");
+  const newContent8 = document.createTextNode("High Streak: 0");
+  newElement8.appendChild(newContent8);
+  newElement8.setAttribute("id","high_streak_display");
+  const currentPlace8 = document.getElementById("div5");
+  document.body.insertBefore(newElement8, currentPlace8);
   const rock = document.getElementById('rock_button');
   const scissor = document.getElementById('scissor_button');
   const paper = document.getElementById('paper_button');
@@ -44,6 +65,8 @@ function ready() {
 }
 
 your_choice;
+streak;
+
 
 
 function setAndPrettyMuchStartRock() {
@@ -69,6 +92,7 @@ function setAndPrettyMuchStart() {
   } else if ( computer_choice == "rock") {
     if (your_choice == "paper") {
       youWin()
+      updateScores()
 
     }
     if (your_choice == "scissor") {
@@ -99,16 +123,44 @@ function youLose() {
   document.getElementById("winner_display").innerHTML = "You lose! The computer's choice was " + computer_choice + ".";
   const winner_display_class = document.getElementById("winner_display");
   winner_display_class.className = "loser"
+  updateScores("loss")
 }
 
 function youWin() {
   document.getElementById("winner_display").innerHTML = "You win! The computer's choice was " + computer_choice + ".";
   const winner_display_class = document.getElementById("winner_display");
   winner_display_class.className = "winner"
+  updateScores("win")
 }
 
 function tie() {
   document.getElementById("winner_display").innerHTML = "You tie!";
   const winner_display_class = document.getElementById("winner_display");
   winner_display_class.className = "tied"
+}
+
+function updateScores(result) {
+  if (result == "loss") {
+    streak = 0;
+    updateUiScores();
+  } else if (result == "win") {
+    streak++;
+    if (streak > high_streak) {
+      high_streak = streak;
+    }
+    score++;
+    updateUiScores();
+  }
+}
+
+function updateUiScores() {
+  document.getElementById("streak_display").innerHTML = "Streak: " + streak;
+  document.getElementById("score_display").innerHTML = "Score: " + score;
+  document.getElementById("high_streak_display").innerHTML = "High Streak: " + high_streak;
+}
+
+function check() {
+  if (high_streak < streak) {
+    streak = high_streak
+  }
 }
